@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <style>
+        html, body {
+            padding: 0;
+            border: 0;
+            margin: 0;
+        }
+
+        body, form {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        input {
+            width: 60vw;
+            font-size: 5rem;
+            color: blue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Update A Task</h1>
+<form method="post" action="/task/update">
+    <input type="text" name="taskid" placeholder="taskid" required autofocus value="{{.TaskID}}">
+    <input type="text" name="assigner" placeholder="assigner" required value="{{.Assigner}}">
+    <input type="text" name="content" placeholder="content" required value="{{.Content}}">
+     <label for="sr">{{.State}}</label>
+    <select name="status" id="sr">
+        <option value="open">open</option>
+        <option value="doing">doing</option>
+        <option value="completed">completed</option>
+        <option value="overdue">overdue</option>
+    </select>
+     <input type="text" name="assignee" placeholder="assignee" required value="{{.Assignee}}">
+      <input type="text" name="issueDate" placeholder="issuedate" required value="{{.IssueDate}}">
+       <input type="text" name="dueDate" placeholder="duedate" required value="{{.DueDate}}">
+    <input type="submit">
+</form>
+
+</body>
+</html>

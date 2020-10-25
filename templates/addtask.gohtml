@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<form method="post">
+
+    <h2>What do you want to be done ?</h2><br>
+    <input type="text" name="content" placeholder=""><br>
+    <h2>Who do you want to assign this task to ?</h2><br>
+    <input type="text" name="assignee" placeholder=""><br>
+    <h2>Enter the due date</h2><br>
+    <input type="text" name="dueDate" placeholder="MM-DD-YYYY"><br>
+       <h2>Status</h2><br>
+        <label for="sr">Role</label>
+    <select name="status" id="sr">
+        <option value="open">open</option>
+        <option value="doing">doing</option>
+        <option value="completed">completed</option>
+        <option value="overdue">overdue</option>
+    </select>
+    <input type="submit">
+    
+
+</form>
+<p class="link"><a href="/task">Back to all tasks</a></p>
+</body>
+</html>

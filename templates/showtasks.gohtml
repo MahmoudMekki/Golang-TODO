@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <style>
+        html, body, p {
+            padding: 0;
+            border: 0;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: left;
+            height: 100vh;
+        }
+        p {
+            margin-left: 4rem;
+            font-size: 2rem;
+            color: black;
+          }
+        .link {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+<p> Task ID - Assigner - Content - State - Assignee - Due Data - Issue Date</p> 
+
+{{range .}}
+<p><a href="/task/show?taskid={{.TaskID}}">{{.TaskID}}</a> - {{.Assigner}} - {{.Content}} - {{.State}} - {{.Assignee}} - {{.DueDate}} - {{.IssueDate}} - <a href="/task/update?taskid={{.TaskID}}">update</a>  - <a href="/task/delete?taskid={{.TaskID}}">delete</a> </p>
+{{end}}
+
+<p class="link"><a href="/task/add">Add a new task</a></p>
+<p class="link"><a href="/task/complete">Show completed Tasks</a></p>
+<p class="link"><a href="/task/overdue">Show overdue Tasks</a></p>
+<p class="link"><a href="/task/pending">Show pending Tasks</a></p>
+</body>
+</html>
