@@ -34,7 +34,7 @@ To run this application, execute:
 go run main.go
 ```
 
-You should be able to access this application at `localhost:8080`
+You should be able to access this application at `localhost:8080` on your browser
 
 >**NOTE**<br>
 >If you modified the port in the `.env` file, you should access the application for the port you set
